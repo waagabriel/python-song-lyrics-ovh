@@ -1,4 +1,5 @@
 import requests
+import sys
 
 
 artista = input("Insira o nome do Artista:\t")
@@ -10,6 +11,7 @@ data = requests.get(Api)
 
 if data.status_code == 404:
     print("Erro ao pesquisar\n")
+    sys.exit(1)
 
 letras = str(data.content)
 letras = letras.replace('\\n', '\n').replace('\\r', ' ').replace('\\', ' ')
