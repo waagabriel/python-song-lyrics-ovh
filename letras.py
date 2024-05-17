@@ -1,10 +1,10 @@
 import requests
 import sys
 
-artista = input("Insira o nome do Artista:\t")
-musica  = input("Insira o nome da musica:\t")
+artista = input("\x1b[31mInsira o nome do Artista:\t")
+musica  = input("\x1b[38;5;18mInsira o nome da musica:\t")
 
-Api = "https://api.lyrics.ovh/v1/" + artista + "/" + musica
+Api = f"https://api.lyrics.ovh/v1/{artista}/{musica}"
 
 data = requests.get(Api)
 
