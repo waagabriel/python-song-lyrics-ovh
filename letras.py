@@ -9,7 +9,7 @@ Api = f"https://api.lyrics.ovh/v1/{artista}/{musica}"
 data = requests.get(Api)
 
 if data.status_code == 404:
-    print("Erro ao pesquisar\n")
+    print("\x1b[38;5;52mErro ao pesquisar\n")
     sys.exit(1)
 
 letras = str(data.content)
